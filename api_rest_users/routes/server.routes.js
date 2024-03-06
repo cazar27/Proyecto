@@ -2,7 +2,7 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 const { login } = require('../controllers/auth.controllers');
-const { createUser, updateUser, getUsersCount, getUserByUsername, getUserByEmail, getUserById, deleteUser, updatePassword } = require('../controllers/users.controllers');
+const { createUser, updateUser, getUsersCount, getUserByUsername, getUserById, deleteUser, updatePassword } = require('../controllers/users.controllers');
 const { paginatedResults } = require('../controllers/generic.controller');
 
 const tokenValidation = require('../middlewares/auth.validations');
