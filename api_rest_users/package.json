@@ -1,0 +1,30 @@
+{
+  "name": "api-rest-users",
+  "version": "1.0.0",
+  "description": "api rest users",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cazar27/prueba_tecnica_users.git"
+  },
+  "author": "Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cazar27/prueba_tecnica_users/issues"
+  },
+  "homepage": "https://github.com/cazar27/prueba_tecnica_users#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.1.0"
+  }
+}
