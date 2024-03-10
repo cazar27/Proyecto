@@ -8,7 +8,6 @@ const tokenValidation = async (req, res = response, next) => {
     const authorizationHeader = req.headers.authorization;
     const accessToken =
       authorizationHeader && authorizationHeader.split(" ")[1];
-      console.log(accessToken);
     if (!accessToken) {
       return res
         .status(401)
@@ -16,7 +15,6 @@ const tokenValidation = async (req, res = response, next) => {
     }
 
     const decodedToken = jwt.verify(accessToken, process.env.SECRET_JWT_SEED);
-    console.log(decodedToken);
     const user = await User.findById(decodedToken.uid);
     if (!user) {
       return res.status(401).json({ message: "Token de acceso no válido" });

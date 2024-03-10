@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// style of login and register
+.bg-white {
+  background-color: white;
+}
+.shadow {
+  box-shadow: var(--mdc-elevated-card-container-elevation);
+}
+.form-box {
+  width: 18rem;
+  padding: 2rem;
+  margin: 2rem;
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.link-box {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+h2.title-login {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// style of snack-bar
+.alert_error.mat-mdc-snack-bar-container {
+  .mdc-snackbar__surface {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+    }
+    background-color: #ebc8c4;
+    border: 1px solid #a02c26;
+    border-radius: 7px;
+    margin: 2rem;
+  }
+  .mdc-snackbar__label, .button_container {
+    color: #a02c26;
+  }
+}
+
+.alert_warn.mat-mdc-snack-bar-container {
+  .mdc-snackbar__surface {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+    }
+    background-color: #f8f3d6;
+    border: 1px solid #967132;
+    border-radius: 7px;
+    margin: 2rem;
+  }
+  .mdc-snackbar__label, .button_container {
+    color: #967132;
+  }
+}
+
+.alert_info.mat-mdc-snack-bar-container {
+  .mdc-snackbar__surface {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+    }
+    background-color: #cde8f5;
+    border: 1px solid #4480ae;
+    border-radius: 7px;
+    margin: 2rem;
+  }
+  .mdc-snackbar__label, .button_container {
+    color: #4480ae;
+  }
+}
+
+.alert_success.mat-mdc-snack-bar-container {
+  .mdc-snackbar__surface {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      display: flex;
+    }
+    background-color: #def2d6;
+    border: 1px solid #5a7052;
+    border-radius: 7px;
+    margin: 2rem;
+  }
+  .mdc-snackbar__label, .button_container {
+    color: #5a7052;
+  }
+}

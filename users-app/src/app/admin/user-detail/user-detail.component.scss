@@ -1,0 +1,11 @@
+.container-user-detail {
+  border-radius: var(--mdc-elevated-card-container-shape);
+    background-color: var(--mdc-elevated-card-container-color);
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--mdc-elevated-card-container-color);
+    box-shadow: var(--mdc-elevated-card-container-elevation);
+    padding: 1rem;
+    margin: 2rem;
+    min-height: 18rem;
+}

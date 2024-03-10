@@ -1,0 +1,26 @@
+
+<div *ngIf="userList$ | async as usersData">
+  <h2 class="title-login">Lista de Usuarios</h2>
+  <div class="card-container">
+    <mat-card class="card" *ngFor="let user of usersData.results">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{ user.name }}</mat-card-title>
+          <mat-card-subtitle>{{ user.surnames }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <p>email: {{ user.email }}</p>
+        <p>nick: {{ user.username }}</p>
+        <p>edad: {{ user.age }}</p>
+      </mat-card-content>
+      <mat-card-actions class="actions">
+        <button mat-raised-button *ngIf="user._id" (click)="goToDetail(user._id)" color="primary">Detalle</button>
+        <button mat-raised-button *ngIf="user._id" (click)="deleteUser(user._id)" color="accent">Eliminar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<div *ngIf="!userList$">
+  <h1>No hay usuarios para mostrar ahora mismo</h1>
+</div>

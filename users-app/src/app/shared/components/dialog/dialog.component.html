@@ -1,0 +1,10 @@
+<div class="container-alert">
+  <h1 mat-dialog-title>{{title}}</h1>
+  <div mat-dialog-content>
+    {{description}}
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onAccept(true)">Aceptar</button>
+    <button mat-raised-button color="accent" (click)="onAccept(false)">Cancelar</button>
+  </div>
+</div>

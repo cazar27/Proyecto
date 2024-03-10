@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="header">
+  <span>{{title}}</span>
+  <div class="logged-box" *ngIf="username">
+    <span>
+      {{ username }}
+    </span>
+    <button (click)="logout()" type="button" mat-mini-fab color="warn" aria-label="Click to open menu">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<router-outlet />

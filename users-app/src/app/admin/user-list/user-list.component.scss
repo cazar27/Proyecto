@@ -1,0 +1,16 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  grid-gap: 1rem;
+
+  .mat-mdc-card {
+    min-width: 14rem;
+    padding: .3rem;
+    .actions {
+      padding: .3rem;
+      padding-inline: 16px;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<form class="form-box bg-white shadow" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+  <h2 class="title-login">Inicio de sesion</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label><i class="icon-user"></i> Email</mat-label>
+    <input matInput placeholder="mail@mail.com" formControlName="email" type="email">
+    <mat-error> Email invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label><i class="icon-lock"></i> Constraseña</mat-label>
+    <input matInput placeholder="****" formControlName="password" type="password">
+    <mat-error> Password incorrecta </mat-error>
+  </mat-form-field>
+
+  <div class="btn-box">
+    <app-button [titleBtn]="'Iniciar Sesión'"></app-button>
+  </div>
+  <div class="link-box">
+    <p>Si no dispone de una cuenta:</p>
+    <p>
+      <a routerLink="/singup">Registrese</a>
+    </p>
+  </div>
+</form>

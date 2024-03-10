@@ -1,0 +1,15 @@
+<div class="alert">
+  <span class="alert_container" matSnackBarLabel>
+    <h3><mat-icon>{{typeIcon}}</mat-icon> {{data.title}}</h3>
+    <h2>{{data.message}}</h2>
+  </span>
+  <span matSnackBarActions class="button_container">
+    <button
+      mat-icon-button
+      matSnackBarAction
+      (click)="snackBarRef.dismissWithAction()"
+      >
+      <mat-icon>close</mat-icon>
+    </button>
+  </span>
+</div>

@@ -1,0 +1,12 @@
+<div class="container-user-detail" *ngIf="data$ | async as data">
+  <h2>Detalles del usuario</h2>
+  <div>
+    <h3>Nombre del usuario: {{ data.user?.name }} {{ data.user?.surnames }}</h3>
+    <p>Email: {{ data.user?.email }}</p>
+    <p>Nick: {{ data.user?.username }}</p>
+    <p>Edad: {{ data.user?.age}}</p>
+    <p>Fecha de la creación: {{ data.user?.creationDate | date }}</p>
+    <p>Última conexión: {{ data.user?.lastLogging | date }}</p>
+    <button mat-raised-button type="button" color="primary" (click)="gotoBack()">Back</button>
+  </div>
+</div>

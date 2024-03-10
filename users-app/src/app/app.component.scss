@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.logged-box {
+  display: flex;
+  align-items: center;
+  span {
+    padding-inline: 1rem;
+  }
+}
+

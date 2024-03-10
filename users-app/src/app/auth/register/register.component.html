@@ -1,0 +1,55 @@
+<form class="form-box bg-white shadow" autocomplete="off"  [formGroup]="myRegisterForm" (ngSubmit)="onSubmitRegister()">
+  <h2 class="title-login">Registro de usuario</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput placeholder="Andres" formControlName="name" type="text">
+    <mat-error > Nombre invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Apellido(s)</mat-label>
+    <input matInput placeholder="Perez" formControlName="surnames" type="surnames">
+    <mat-error > Apellido(s) invalido(s) </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nickname</mat-label>
+    <input matInput placeholder="nickname" formControlName="username" type="username">
+    <mat-error > Nickname invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Edad</mat-label>
+    <input matInput placeholder="18" formControlName="age" type="number">
+    <mat-error > Edad invalida </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="mail@mail.com" formControlName="email" type="email">
+    <mat-error > Email invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Constraseña</mat-label>
+    <input matInput placeholder="****" formControlName="password" type="password">
+    <mat-error> Contraseña Invalida </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Repite constraseña</mat-label>
+    <input matInput placeholder="****" formControlName="rptpassword" type="password">
+    <mat-error> Las contraseñas no coinciden </mat-error>
+  </mat-form-field>
+
+  <div class="btn-box">
+    <app-button [titleBtn]="'Crear cuenta'"></app-button>
+  </div>
+  <div class="link-box">
+    <p>Si ya dispone de una cuenta:</p>
+    <p>
+      <a routerLink="/login">Inicie sesion</a>
+    </p>
+  </div>
+</form>

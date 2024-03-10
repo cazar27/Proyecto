@@ -1,0 +1,31 @@
+<form class="form-box bg-white shadow" autocomplete="off"  [formGroup]="myProfileForm" (ngSubmit)="onSubmitChangeData()">
+  <h2 class="title-login">Perfil de usuario</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput placeholder="Andres" formControlName="name" type="text">
+    <mat-error > Nombre invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Apellido(s)</mat-label>
+    <input matInput placeholder="Perez" formControlName="surnames" type="surnames">
+    <mat-error > Apellido(s) invalido(s) </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nickname</mat-label>
+    <input matInput placeholder="nickname" formControlName="username" type="username">
+    <mat-error > Nickname invalido </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Edad</mat-label>
+    <input matInput placeholder="18" formControlName="age" type="number">
+    <mat-error > Edad invalida </mat-error>
+  </mat-form-field>
+
+  <div class="btn-box">
+    <app-button [titleBtn]="'Guardar Cambios'"></app-button>
+  </div>
+</form>

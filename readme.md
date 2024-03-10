@@ -19,14 +19,14 @@ El proyecto se organiza en diferentes archivos y directorios:
 El modelo **`User`** representa a un usuario y tiene las siguientes propiedades:
 
 * **`id`**: Identificador único del usuario.
-* **`creationDate`**: Fecha de creación del usuario.
-* **`lastLogging`**: Fecha del ultimo login realizado por el usuario.
 * **`name`**: Nombre del usuario.
 * **`surnames`**: Apellidos del usuario.
 * **`age`**: Edad del usuario.
 * **`email`**: Correo electrónico del usuario (único).
 * **`password`**: Contraseña del usuario (se guarda encriptada).
 * **`active`**: Gestiona si el usuario esta activo o no.
+* **`creationDate`**: Fecha de creación del usuario.
+* **`lastLogging`**: Fecha del ultimo login realizado por el usuario.
 
 ### **Rutas de la API**
 
