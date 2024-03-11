@@ -36,4 +36,9 @@ describe('DialogComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should onAccept', () => {
+    component.onAccept(true);
+    expect(dialogRefMock.close).toHaveBeenCalledWith(true);
+  });
 });

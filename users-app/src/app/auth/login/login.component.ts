@@ -40,7 +40,7 @@ export class LoginComponent {
     password: ['1234@Test', [Validators.required, Validators.minLength(8)]],
   });
 
-  onSubmitLogin() {
+  onSubmitLogin(): void {
     this.loginForm.markAllAsTouched();
     if (this.loginForm.valid) {
       const LoginCredentials: DataLoginForm = this.loginForm.value;

@@ -55,13 +55,6 @@ export class ChangePasswordComponent {
             4
           )
           this.changePasswordForm.reset();
-        } else {
-          this.alertService.openAlert(
-            'Error de servidor',
-            'La contraseña no ha sido cambiada',
-            'dangerous',
-            'alert_error'
-          )
         }
       })
     } else {

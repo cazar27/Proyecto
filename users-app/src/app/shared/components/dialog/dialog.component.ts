@@ -26,7 +26,7 @@ export class DialogComponent implements OnInit {
     this.description = this.data.desc;
   }
 
-  onAccept(accept: boolean) {
+  onAccept(accept: boolean): void {
     this.dialogRef.close(accept);
   }
 

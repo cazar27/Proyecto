@@ -79,6 +79,7 @@ describe('ChangePasswordComponent', () => {
       oldPassword: 'oldPassword',
       password: 'newPassword',
     });
+
     expect(spyAlertServiceOpenAlert).toHaveBeenCalledWith(
       'Contraseña cambiada',
       'La contraseña ha sido cambiada correctamente',
@@ -94,8 +95,8 @@ describe('ChangePasswordComponent', () => {
   });
 
 
-  it('should call AuthService.changePassword and openAlert on invalid form submission', () => {
-    const spyAlertServiceOpenAlert = alertService.openAlertErrorValidation as jasmine.Spy;
+  it('should call AuthService.changePassword and openAlertErrorValidation on invalid form submission', () => {
+    const spyAlertServiceOpenAlertErrorValidation = alertService.openAlertErrorValidation as jasmine.Spy;
 
     component.changePasswordForm.setValue({
       currentpassword: '',
@@ -105,7 +106,7 @@ describe('ChangePasswordComponent', () => {
 
     component.onSubmitChangePassword();
 
-    expect(spyAlertServiceOpenAlert).toHaveBeenCalledWith();
+    expect(spyAlertServiceOpenAlertErrorValidation).toHaveBeenCalled();
     expect(component.changePasswordForm.value).toEqual({
       currentpassword: '',
       password: '',

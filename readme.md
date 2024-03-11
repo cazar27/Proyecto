@@ -71,3 +71,5 @@ Cosas pendientes que me han quedado por hacer:
 1. hacer un scroll infinito con paginado para listar los usuarios, usando el paginado del backend para ir añadiendo cada x usuarios.
 2. Añadir mas validaciones personalizadas a los formularios, como en registro el email o username ya existen, o en login, email no encontrado, o contraseña incorrecta.
 3. Queria tanto en el back como en el front añadir un endpoint para recibir el usuario solo con el token para si se entra a la app con un token en el storage del navegador poder loguear.
+
+[Readme del frontend](https://github.com/cazar27/Proyecto/tree/master/users-app#readme)
