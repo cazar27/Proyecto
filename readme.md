@@ -50,3 +50,24 @@ Puedes importar esta colección en Postman para probar las rutas y realizar las 
 [Readme del backend](https://github.com/cazar27/Proyecto/tree/master/api_rest_users#readme)
 
 ## FRONTEND
+
+He creado una aplicacion Angular SSR, ya que renderiza las paginas del lado del servidor en vez del navegador, Mejora la velocidad de carga inicial, etc.
+Una aplicacion con sass, he tratado de realizar una aplicacion, simplificada, reutilizable y escalable, analizando previamente toda su funcionalidad para evitar posibles errores o refactorizaciones.
+
+### **Estructura del proyecto**
+
+He usado rutas, guards, interfaces, modelos, interceptores, servicios, animaciones...
+
+* **`admin`**: Directorio en el que se encuentran todos los componentes dedicados a la administracion del o los usuarios(CRUD).
+* **`animations`**: Carpeta en la que estan las animaciones que he usado para animar la aplicacion.
+* **`auth`**: Directorio en el que se encuentran todos los componentes dedicados a la autentificacion de usuario.
+* **`core`**: Carpeta donde estan todos los elementos de core, guards, interceptor, interfaces, models,pipe, directives.
+* **`services`**: Aqui se encuentran los servicios, algunos de los mas relevantes auth y users.
+* **`services`**: En esta carpeta estan los componentes comunes.
+
+He usado Angular Material como libreria de componentes en la que me apoyado, y obviamente todos los formularios son reactivos.
+
+Cosas pendientes que me han quedado por hacer:
+1. hacer un scroll infinito con paginado para listar los usuarios, usando el paginado del backend para ir añadiendo cada x usuarios.
+2. Añadir mas validaciones personalizadas a los formularios, como en registro el email o username ya existen, o en login, email no encontrado, o contraseña incorrecta.
+3. Queria tanto en el back como en el front añadir un endpoint para recibir el usuario solo con el token para si se entra a la app con un token en el storage del navegador poder loguear.

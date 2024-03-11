@@ -42,15 +42,3 @@ const userSchema = Schema({
 });
 
 module.exports = model("User", userSchema);
-
-// const user1 = new User({
-//     username: "test1",
-//     name: "Test 1",
-//     surnames: "Surname 1",
-//     email: "test1@gmail.com",
-//     password: "Test%123",
-//     age: 25,
-//     active: true,
-//     lastLogging: null,
-//     // creationDate se establecerá automáticamente
-// });

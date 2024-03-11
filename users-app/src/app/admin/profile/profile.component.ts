@@ -39,13 +39,13 @@ export class ProfileComponent {
     name: ['', [Validators.required, Validators.minLength(2)]],
     surnames: ['', [Validators.required, Validators.minLength(8)]],
     username: ['', [Validators.required, Validators.minLength(4)]],
-    age: ['', [Validators.required]],
+    age: ['', [Validators.required]]
   });
 
   ngOnInit() {
     this._idUser = this.authService.getIdUser();
     this.usersService.getUserById(this._idUser).subscribe((data) => {
-      if(data.ok) {
+      if (data.ok) {
         this.myProfileForm.controls['name'].setValue(data.user?.name);
         this.myProfileForm.controls['surnames'].setValue(data.user?.surnames);
         this.myProfileForm.controls['username'].setValue(data.user?.username);
@@ -75,7 +75,7 @@ export class ProfileComponent {
         }
       })
     } else {
-     this.alertService.openAlertErrorValidation();
+      this.alertService.openAlertErrorValidation();
     }
   }
 

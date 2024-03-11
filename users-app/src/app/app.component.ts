@@ -27,26 +27,12 @@ export class AppComponent {
   router = inject(Router);
   title = 'Users App';
   username = '';
+
   ngOnInit(): void {
-    //TODO: Queria haber hecho el autologueo cuando detectara el navegador un token valido pero no tenia hecho el back
-    // this.checkAuthentication();
     this.authService.username$.subscribe((username) => {
-      console.log('aqui paso ' + username);
       this.username = username || '';
     });
   }
-
-  // checkAuthentication(): void {
-  //   if (this.isLogged()) {
-  //     this.router.navigate(['/admin']);
-  //   } else {
-  //     this.router.navigate(['/login']);
-  //   }
-  // }
-
-  // isLogged(): boolean {
-  //   return this.authService.getToken() !== null;
-  // }
 
   logout(): void {
     this.authService.logout();

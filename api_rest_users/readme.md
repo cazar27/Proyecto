@@ -50,4 +50,4 @@ npm run test
 ```
 ## 5. Api Documentation
 
-[link to documentation of api in postman]https://documenter.getpostman.com/view/10600647/2sA2xfZDv5
+[link to documentation of api in postman](https://documenter.getpostman.com/view/10600647/2sA2xfZDv5)

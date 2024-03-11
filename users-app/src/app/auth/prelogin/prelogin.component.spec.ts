@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 import { PreloginComponent } from './prelogin.component';
 
 describe('PreloginComponent', () => {
@@ -8,10 +9,14 @@ describe('PreloginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PreloginComponent]
+      imports: [
+        BrowserAnimationsModule,
+        RouterTestingModule,
+        PreloginComponent
+      ]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PreloginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -28,11 +28,7 @@ export class AuthService {
   }
 
   logout(): void {
-    try {
-      sessionStorage.clear();
-    } catch (error) {
-      console.error(error);
-    }
+    sessionStorage.clear();
   }
 
   changePassword(userId: string, passwords: ChangePasswordRequest): Observable<any> {
@@ -41,21 +37,12 @@ export class AuthService {
   }
 
   setToken(token: string): void {
-    try {
-      sessionStorage.setItem('token', token);
-    } catch (error) {
-      console.error(error);
-    }
+    sessionStorage.setItem('token', token);
   }
 
   getToken(): string | null {
-    try {
-      const token = sessionStorage.getItem('token');
-      return token;
-    } catch (error) {
-      console.error(error);
-      return null;
-    }
+    const token = sessionStorage.getItem('token');
+    return token;
   }
 
   setIdUser(id: string): void {

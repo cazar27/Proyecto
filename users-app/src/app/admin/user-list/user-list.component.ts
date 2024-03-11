@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { Observable } from 'rxjs';
 import { CommonModule, NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButton } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { UserData, apiResponse } from '../../core/interfaces/user.interface';
 import { UsersService } from '../../services/users/users.service';
 import { DialogService } from '../../services/dialog/dialog.service';

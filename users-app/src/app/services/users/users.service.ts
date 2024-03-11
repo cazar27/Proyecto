@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { UserData, apiResponse } from '../../core/interfaces/user.interface';
+import { UserData, UserUpdate, apiResponse } from '../../core/interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class UsersService {
     return this.http.get(url);
   }
 
-  updateUser(userId: string, updatedUser: any): Observable<apiResponse<UserData>> {
+  updateUser(userId: string, updatedUser: UserUpdate): Observable<apiResponse<UserData>> {
     const url = `${this._baseUrl}/user/${userId}`;
     return this.http.put(url, updatedUser);
   }

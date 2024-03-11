@@ -1,54 +1,36 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import { of } from 'rxjs';
-
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { DialogComponent } from './dialog.component';
 
 describe('DialogComponent', () => {
   let component: DialogComponent;
   let fixture: ComponentFixture<DialogComponent>;
 
-  const dialogMock = {
-    open: () => {
-      return dialogMock;
-    },
-    close: () => { }
+  const dialogRefMock = {
+    close: jasmine.createSpy('close')
   };
 
-  const dialogReffsSpyObj = jasmine.createSpyObj({
-    afterClosed: of({ ok: true }),
-    acept: () => { },
-    close: () => { }
-  });
-
-  dialogReffsSpyObj.componentInstance = {
-    width: '18rem',
-    data: {
-      title: 'title',
-      desc: 'description'
-    },
-  }
+  const dialogDataMock = {
+    title: 'Mock Title',
+    desc: 'Mock Description'
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DialogComponent],
-      imports: [MatDialogModule],
+      declarations: [
+
+      ],
       providers: [
-        { provide: MatDialogRef, useValue: dialogMock },
-        { provide: MAT_DIALOG_DATA, useValue: { myData: dialogReffsSpyObj.data } }
+        { provide: MatDialogRef, useValue: dialogRefMock },
+        { provide: MAT_DIALOG_DATA, useValue: dialogDataMock }
       ]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    component.title = 'title';
-    component.description = 'description';
-    expect(component.title).toEqual('title');
-    expect(component.description).toEqual('description');
   });
 
   it('should create', () => {

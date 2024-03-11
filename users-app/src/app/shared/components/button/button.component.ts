@@ -9,9 +9,5 @@ import { MatButton } from '@angular/material/button';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-
   @Input() titleBtn = 'Aceptar';
-
-  constructor() { }
-
 }
