@@ -52,7 +52,7 @@ Puedes importar esta colección en Postman para probar las rutas y realizar las 
 ## FRONTEND
 
 He creado una aplicacion Angular SSR, ya que renderiza las paginas del lado del servidor en vez del navegador, Mejora la velocidad de carga inicial, etc.
-Una aplicacion con sass, he tratado de realizar una aplicacion, simplificada, reutilizable y escalable, analizando previamente toda su funcionalidad para evitar posibles errores o refactorizaciones.
+Una aplicacion con scss, he tratado de realizar una aplicacion, simplificada, reutilizable y escalable, analizando previamente toda su funcionalidad para evitar posibles errores o refactorizaciones.
 
 ### **Estructura del proyecto**
 
@@ -71,5 +71,6 @@ Cosas pendientes que me han quedado por hacer:
 1. hacer un scroll infinito con paginado para listar los usuarios, usando el paginado del backend para ir añadiendo cada x usuarios.
 2. Añadir mas validaciones personalizadas a los formularios, como en registro el email o username ya existen, o en login, email no encontrado, o contraseña incorrecta.
 3. Queria tanto en el back como en el front añadir un endpoint para recibir el usuario solo con el token para si se entra a la app con un token en el storage del navegador poder loguear.
+4. Me he centrado en el desarrollo de la aplicacion y no en la del codigo por falta de tiempo, los test estan hechos para cubrir el codigo pero no asi para testearlo mas en profundida con mocks y testeo de funiones con parametros reales 
 
 [Readme del frontend](https://github.com/cazar27/Proyecto/tree/master/users-app#readme)
